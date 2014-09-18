@@ -10,4 +10,11 @@ class Task extends  Eloquent
 	protected $fillable = ['text'];
 
 
+	public function users()
+	{
+		
+        return $this->belongsToMany('User');
+	}
+
+
 }
