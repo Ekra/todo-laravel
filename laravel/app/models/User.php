@@ -7,6 +7,11 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
+	public function tasks()
+	{
+		return $this->hasMany('Task');
+	}
+
 	use UserTrait, RemindableTrait;
 
 	public $timestamps = false;
@@ -47,5 +52,7 @@ public static function isValid($data)
 	 * @var array
 	 */
 	protected $hidden = array('password', 'remember_token');
+
+
 
 }
