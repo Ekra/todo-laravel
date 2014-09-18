@@ -22,8 +22,7 @@
 
 <div>{{Form::submit('sign in') }}</div>
 
-
-<div>{{Form::submit('sign up') }}</div>
+<div>{{ link_to_route('users.create', 'Create user') }}</div>
 
 
 {{Form::close()}}
