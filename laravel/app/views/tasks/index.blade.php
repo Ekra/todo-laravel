@@ -35,7 +35,7 @@ body
 @if(Auth::check())
 <div>
 {{Form::open(['action' => 'SessionsController@destroy', 'method' => 'DELETE'])}}
-{{Form::submit('Logout')}}
+{{Form::submit('Logout',['class' => 'btn btn-success'])}}
 {{Form::close()}}
 </div>
 @endif
