@@ -27,7 +27,7 @@ body
 
 </div>
 
-<div>{{Form::submit('sign in') }}</div>
+<div>{{Form::submit('sign in', ['class' => 'btn btn-success']) }}</div>
 
 <div>{{ link_to_route('users.create', 'Create user') }}</div>
 
