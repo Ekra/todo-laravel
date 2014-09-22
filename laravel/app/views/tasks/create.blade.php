@@ -16,11 +16,13 @@ body
 
 {{ Form::open(array('route'=>'tasks.store')) }}
 
-<div class="form_group">
+<div class="form-group">
 
 {{Form::label('Add Task')}}
 
 {{ Form::text('text' , null, ['class' => 'form-control']) }}
+</div>
+<div class="form-group">
 
 {{Form::submit('Create task', ['class' => 'btn btn-success'])}}
 </div>
