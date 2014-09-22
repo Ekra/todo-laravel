@@ -15,6 +15,9 @@ class TasksController extends \BaseController {
 	public function index()
 	{
 		$tasks = Auth::user()->tasks;
+
+		//$tasks = Task::paginate(2);
+		$tasks = DB::table('tasks')->paginate(2);
 		
 		return View::make('tasks.index', compact('tasks'));
 
@@ -111,6 +114,17 @@ class TasksController extends \BaseController {
 		// redirect
 		return Redirect::route('tasks.index');
 	}
+
+	public function search()
+
+    {
+        $search= Input::get('search');
+
+        $tasks = Task::where('text', 'LIKE', '%'.$search.'%')->paginate(5);
+
+         return View::make("tasks.index",compact('tasks'));
+	}
+
 
 
 }
