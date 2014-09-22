@@ -9,6 +9,8 @@ class Task extends  Eloquent
 
 	protected $fillable = ['text'];
 
+	//public static $pages = 2;
+
 
 	public function users()
 	{

@@ -27,4 +27,5 @@ Route::get('admin', function()
 
 })->before('auth');
 
+Route::get('tasks/search','TasksController@search');
 Route::resource('tasks','TasksController');
